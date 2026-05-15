@@ -1,4 +1,4 @@
-package com._minutes.microservice.currency_conversion_service;
+package com.in28minutes.microservice.currency_conversion_service;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

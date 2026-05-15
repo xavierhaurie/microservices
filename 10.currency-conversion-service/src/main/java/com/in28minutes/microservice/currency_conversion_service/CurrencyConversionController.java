@@ -1,4 +1,4 @@
-package com._minutes.microservice.currency_conversion_service;
+package com.in28minutes.microservice.currency_conversion_service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
