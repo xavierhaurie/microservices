@@ -1,4 +1,4 @@
-package com._minutes.microservices.currency_exchange_service;
+package com.in28minutes.microservices.currency_exchange_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
