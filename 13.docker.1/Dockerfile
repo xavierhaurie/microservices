@@ -1,0 +1,23 @@
+FROM maven:3.9-eclipse-temurin-21 AS build
+WORKDIR /home/app
+
+COPY ./pom.xml /home/app/pom.xml
+COPY ./src/main/java/com/in28minutes/rest/webservices/restfulwebservices/RestfulWebServicesApplication.java \
+./src/main/java/com/in28minutes/rest/webservices/restfulwebservices/RestfulWebServicesApplication.java
+
+# main role: downloads the dependencies
+RUN mvn -f /home/app/pom.xml clean package
+
+COPY . /home/app
+# main role: builds and packages the application code
+RUN mvn -f /home/app/pom.xml clean package
+
+FROM eclipse-temurin:21-jre
+EXPOSE 5000
+COPY --from=build /home/app/target/*.jar /app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
+
+#The idea is that it minimizes the number of layers that need
+# to be re-built when there is a code or pom change.
+
+# currently not working;
