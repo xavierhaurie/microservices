@@ -21,11 +21,15 @@ public class ApiGatewayConfiguration {
                         .uri("lb://currency-exchange"))
                 .route(r -> r.path("/currency-conversion/**")
                         .uri("lb://currency-conversion"))
+                .route(r -> r.path("/currency-conversion-new/**")
+                        .filters(f -> f.rewritePath(
+                                "/currency-conversion-new/(?<segment>.*)",
+                                "/currency-conversion/${segment}"))
+                        .uri("lb://currency-conversion"))
                 .route(r -> r.path("/currency-conversion-feign/**")
                         .filters(f -> f.rewritePath(
                                 "/currency-conversion-feign/(?<segment>.*)",
                                 "/currency-conversion/${segment}"))
-                        .uri("lb://currency-conversion"))
-                .build();
+                        .uri("lb://currency-conversion")).build();
     }
 }

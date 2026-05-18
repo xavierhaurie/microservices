@@ -68,6 +68,33 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- telemetry from the ground up, using claude (externally) -->
+		<!-- MOT AS PER THE COURSE. HAD TO DO IT THIS WAY SO IT WOULD WORK! -->
+		<!-- Spring Boot's Micrometer Tracing support over OpenTelemetry -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-micrometer-tracing-opentelemetry</artifactId>
+		</dependency>
+
+		<!-- Bridges Micrometer Observation API to OpenTelemetry -->
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-tracing-bridge-otel</artifactId>
+		</dependency>
+
+		<!-- Spring Boot's Zipkin support -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-zipkin</artifactId>
+		</dependency>
+
+		<!-- OTel exporter that sends spans to Zipkin -->
+		<dependency>
+			<groupId>io.opentelemetry</groupId>
+			<artifactId>opentelemetry-exporter-zipkin</artifactId>
+		</dependency>
+		<!-- end telemetry -->
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

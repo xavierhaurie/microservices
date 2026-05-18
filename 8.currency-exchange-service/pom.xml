@@ -103,6 +103,7 @@
 
 
 		<!-- telemetry from the ground up, using claude (externally) -->
+		<!-- MOT AS PER THE COURSE. HAD TO DO IT THIS WAY SO IT WOULD WORK! -->
 		<!-- Spring Boot's Micrometer Tracing support over OpenTelemetry -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
