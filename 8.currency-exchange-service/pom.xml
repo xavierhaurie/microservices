@@ -69,39 +69,6 @@
 			<scope>test</scope>
 		</dependency>
 
-<!--		&lt;!&ndash; telemetry &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>io.micrometer</groupId>-->
-<!--			<artifactId>micrometer-observation</artifactId>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>io.micrometer</groupId>-->
-<!--			<artifactId>micrometer-tracing-bridge-otel</artifactId>-->
-<!--		</dependency>-->
-
-<!--&lt;!&ndash;		<dependency>&ndash;&gt;-->
-<!--&lt;!&ndash;			<groupId>io.opentelemetry</groupId>&ndash;&gt;-->
-<!--&lt;!&ndash;			<artifactId>opentelemetry-exporter-zipkin</artifactId>&ndash;&gt;-->
-<!--&lt;!&ndash;		</dependency>&ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>io.opentelemetry</groupId>-->
-<!--			<artifactId>opentelemetry-exporter-otlp</artifactId>-->
-<!--		</dependency>-->
-
-		<!-- other way suggeste by Claude: -->
-		<!-- Micrometer Tracing - 2nd option -->
-<!--		<dependency>-->
-<!--			<groupId>io.micrometer</groupId>-->
-<!--			<artifactId>micrometer-tracing-bridge-brave</artifactId>-->
-<!--		</dependency>-->
-<!--		&lt;!&ndash; Zipkin reporter (optional, to send traces to Zipkin) &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>io.zipkin.reporter2</groupId>-->
-<!--			<artifactId>zipkin-reporter-brave</artifactId>-->
-<!--		</dependency>-->
-<!--		End 2nd option-->
-
-
 		<!-- telemetry from the ground up, using claude (externally) -->
 		<!-- MOT AS PER THE COURSE. HAD TO DO IT THIS WAY SO IT WOULD WORK! -->
 		<!-- Spring Boot's Micrometer Tracing support over OpenTelemetry -->
